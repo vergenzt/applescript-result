@@ -16,12 +16,16 @@
   "author": "Jakob Krigovsky <jakob@krigovsky.com>",
   "files": [
     "index.js",
-    "parser.js"
+    "parser.js",
+    "cli.js"
   ],
   "scripts": {
     "jison": "jison grammar.jison --outfile parser.js",
     "prepare": "npm run jison",
     "test": "standard && npm run jison && ava"
+  },
+  "bin": {
+    "applescript-result": "./cli.js"
   },
   "devDependencies": {
     "ava": "^0.25.0",
